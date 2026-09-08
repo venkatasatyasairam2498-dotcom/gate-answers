@@ -1,0 +1,6 @@
+{
+  "name": "GATE Mathematics Solutions & PDF Generator",
+  "description": "Comprehensive step-by-step solutions and downloadable solutions PDF for Calculus, Linear Algebra, and Probability questions from GATE exam archives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

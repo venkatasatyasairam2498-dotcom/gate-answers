@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900;
+  }
+}
+
+/* Print-optimized layout when using browser print / Save as PDF */
+@media print {
+  header,
+  #open-pdf-modal-btn,
+  #question-search-input,
+  #filter-topic-select,
+  #filter-branch-select,
+  #filter-type-select,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  .shadow-xs,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  .border {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Force page breaks to avoid splitting a question awkwardly */
+  [id^="question-card-"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20pt !important;
+    border: 1pt solid #cbd5e1 !important;
+  }
+}
